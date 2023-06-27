@@ -1,6 +1,10 @@
 import React from 'react'
+import Exercise from './Exercise'
 
 const Overlap1 = () => {
+  const exerciseText = [`02 JEN: That's right`]
+  const correctAnswer = `02 JEN: [That's right]`
+
   return (
     <main>
       <h1>Overlaps 1</h1>
@@ -11,9 +15,10 @@ const Overlap1 = () => {
       </p>
       <div className="examples">[oh no!] [that's great] [I see]</div>
       <p>
-        The example below is supposed to be an overlap. However, it's missing
-        the square brackets. Add them and press "Submit".
+        In the example below, Jen's utterance is supposed to be in overlap.
+        However, it's missing the square brackets. Add them and press "Submit".
       </p>
+      <Exercise text={exerciseText} correctAnswer={correctAnswer} />
     </main>
   )
 }
