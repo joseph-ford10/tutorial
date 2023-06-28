@@ -86,6 +86,7 @@ main {
 
 .nextPageContainer {
   position: relative;
+  margin-bottom: 100px;
 }
 
 .nextPage {
@@ -115,4 +116,15 @@ main {
 .listMainHead {
   margin-bottom: 10px;
   margin-top: 0px;
+}
+
+.topNavbar {
+  height: 75px;
+  background-color: grey;
+}
+
+.footer {
+  margin-top: 75px;
+  height: 75px;
+  background-color: lightgray;
 }
