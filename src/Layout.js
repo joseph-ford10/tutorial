@@ -5,6 +5,7 @@ import WrongAnswer from './WrongAnswer'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import NextPageButton from './NextPageButton'
+import { useEffect } from 'react'
 
 const Layout = ({
   title,
@@ -35,6 +36,7 @@ const Layout = ({
           text={exerciseText}
           correctAnswer={correctAnswer}
           correctAnswerFull={correctAnswerFull}
+          wrongAnswer={wrongAnswer}
           setWrongAnswer={setWrongAnswer}
           complete={complete}
           setComplete={setComplete}

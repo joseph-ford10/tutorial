@@ -7,6 +7,7 @@ const Exercise = ({
   text,
   correctAnswer,
   correctAnswerFull,
+  wrongAnswer,
   setWrongAnswer,
   setComplete,
   setHowComplete,
@@ -46,9 +47,13 @@ const Exercise = ({
         <button className="submitAnswer" onClick={handleClickSubmit}>
           Check Answer
         </button>
-        <button className="revealAnswer" onClick={handleClickReveal}>
-          Reveal Answer
-        </button>
+        {wrongAnswer == true ? (
+          <button className="revealAnswer" onClick={handleClickReveal}>
+            Reveal Answer
+          </button>
+        ) : (
+          ''
+        )}
         <button className="restart" onClick={handleClickRestart}>
           Restart
         </button>
