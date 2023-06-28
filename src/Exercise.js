@@ -17,8 +17,13 @@ const Exercise = ({
 
   const handleClickSubmit = (e) => {
     e.preventDefault()
-    input.includes(correctAnswer) ? setComplete(true) : setWrongAnswer(true)
-    setHowComplete('solved')
+    if (input.includes(correctAnswer)) {
+      setComplete(true)
+      setWrongAnswer(false)
+      setHowComplete('solved')
+    } else {
+      setWrongAnswer(true)
+    }
   }
 
   const handleClickReveal = (e) => {
@@ -44,19 +49,21 @@ const Exercise = ({
           input={input}
           setInput={setInput}
         />
-        <button className="submitAnswer" onClick={handleClickSubmit}>
-          Check Answer
-        </button>
-        {wrongAnswer == true ? (
-          <button className="revealAnswer" onClick={handleClickReveal}>
-            Reveal Answer
+        <div className="buttons">
+          <button className="submitAnswer button" onClick={handleClickSubmit}>
+            Check Answer
           </button>
-        ) : (
-          ''
-        )}
-        <button className="restart" onClick={handleClickRestart}>
-          Restart
-        </button>
+          {wrongAnswer == true ? (
+            <button className="revealAnswer button" onClick={handleClickReveal}>
+              Reveal Answer
+            </button>
+          ) : (
+            ''
+          )}
+          <button className="restart button" onClick={handleClickRestart}>
+            Restart
+          </button>
+        </div>
       </form>
     )
   } else {
@@ -64,9 +71,11 @@ const Exercise = ({
       <>
         <Line lineText={text[0]} />
         <Line lineText={input} />
-        <button className="restart" onClick={handleClickRestart}>
-          Restart
-        </button>
+        <div className="buttons">
+          <button className="restart button" onClick={handleClickRestart}>
+            Restart
+          </button>
+        </div>
       </>
     )
   }

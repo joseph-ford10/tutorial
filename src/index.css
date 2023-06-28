@@ -31,11 +31,6 @@ form {
   display: block;
 }
 
-.submitAnswer {
-  display: block;
-  margin-top: 25px;
-}
-
 .wrapper {
   display: flex;
   justify-content: center;
@@ -52,7 +47,39 @@ main {
   text-align: center;
   color: grey;
 }
+.buttons {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.submitAnswer {
+  display: inline;
+  position: absolute;
+  left: 0px;
+}
+
+.restart {
+  display: inline;
+  position: absolute;
+  left: 250px;
+}
 
 .revealAnswer {
   display: inline;
+  position: absolute;
+  right: 0px;
+}
+
+.wrongAnswer {
+  margin-top: 90px;
+} 
+
+.completedText {
+  margin-top: 90px;
+} 
+
+.button {
+  width: 100px;
+  height: 50px;
 }

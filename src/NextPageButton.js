@@ -5,7 +5,7 @@ const NextPageButton = ({ nextPage }) => {
   const navigate = useNavigate()
 
   return (
-    <button className="nextPage" onClick={() => navigate(`${nextPage}`)}>
+    <button className="nextPage button" onClick={() => navigate(`${nextPage}`)}>
       Next Page
     </button>
   )
