@@ -4,9 +4,10 @@ const NavList = () => {
   return (
     <ul>
       <li>
-        <h1 className="listMainHead">Tutorials</h1>
+        <h2 className="listMainHead">Home</h2>
+        <h2 className="listMainHead">Tutorials</h2>
         <ul>
-          <h2 className="listSubHead">Overlaps</h2>
+          <h3 className="listSubHead">Overlaps</h3>
           <ul>Overlaps 1: Square Brackets</ul>
           <ul>Overlaps 2: Positioning</ul>
           <ul>Overlaps 3: Connecting Lines</ul>

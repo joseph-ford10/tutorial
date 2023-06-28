@@ -35,6 +35,7 @@ const Exercise = ({
   }
 
   const handleClickRestart = (e) => {
+    e.preventDefault()
     setInput(text[1])
     setComplete(false)
   }

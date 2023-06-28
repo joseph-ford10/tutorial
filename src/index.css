@@ -34,6 +34,7 @@ form {
 .wrapper {
   display: flex;
   justify-content: space-evenly;
+  text-align: justify;
 }
 
 main {
@@ -116,10 +117,11 @@ main {
 .listMainHead {
   margin-bottom: 10px;
   margin-top: 0px;
+  list-style-type: none;
 }
 
 .topNavbar {
-  height: 75px;
+  height: 70px;
   background-color: grey;
 }
 
@@ -127,4 +129,12 @@ main {
   margin-top: 75px;
   height: 75px;
   background-color: lightgray;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  margin: 0;
 }

@@ -28,7 +28,6 @@ const Layout = ({
 
   return (
     <>
-      <Navbar />
       <div className="wrapper">
         <NavList />
         <main>
@@ -37,18 +36,20 @@ const Layout = ({
           <div className="examples">
             <p>{examples[0]}</p> <p>{examples[1]}</p> <p>{examples[2]}</p>
           </div>
-          <h2>Exercise</h2>
-          <p>{exerciseIntro}</p>
-          <Exercise
-            text={exerciseText}
-            correctAnswer={correctAnswer}
-            correctAnswerFull={correctAnswerFull}
-            wrongAnswer={wrongAnswer}
-            setWrongAnswer={setWrongAnswer}
-            complete={complete}
-            setComplete={setComplete}
-            setHowComplete={setHowComplete}
-          />
+          <div className="exerciseWrapper">
+            <h2>Exercise</h2>
+            <p>{exerciseIntro}</p>
+            <Exercise
+              text={exerciseText}
+              correctAnswer={correctAnswer}
+              correctAnswerFull={correctAnswerFull}
+              wrongAnswer={wrongAnswer}
+              setWrongAnswer={setWrongAnswer}
+              complete={complete}
+              setComplete={setComplete}
+              setHowComplete={setHowComplete}
+            />
+          </div>
           {wrongAnswer === true ? <WrongAnswer /> : ''}
           {complete === true ? <CompletedText howComplete={howComplete} /> : ''}
           {complete === true ? <NextPageButton nextPage={nextPage} /> : ''}
