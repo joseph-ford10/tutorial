@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import NextPageButton from './NextPageButton'
 import { useEffect } from 'react'
+import NavList from './NavList'
+import ResourceList from './ResourceList'
 
 const Layout = ({
   title,
@@ -24,6 +26,7 @@ const Layout = ({
 
   return (
     <div className="wrapper">
+      <NavList />
       <main>
         <h1>{title}</h1>
         <p>{explanation}</p>
@@ -46,6 +49,7 @@ const Layout = ({
         {complete === true ? <CompletedText howComplete={howComplete} /> : ''}
         {complete === true ? <NextPageButton nextPage={nextPage} /> : ''}
       </main>
+      <ResourceList />
     </div>
   )
 }

@@ -41,30 +41,35 @@ const Exercise = ({
 
   if (complete === false) {
     return (
-      <form>
-        <Line lineText={text[0]} />
-        <EditLine
-          lineText={text[1]}
-          correctAnswer={correctAnswer}
-          input={input}
-          setInput={setInput}
-        />
-        <div className="buttons">
-          <button className="submitAnswer button" onClick={handleClickSubmit}>
-            Check Answer
-          </button>
-          {wrongAnswer == true ? (
-            <button className="revealAnswer button" onClick={handleClickReveal}>
-              Reveal Answer
+      <>
+        <form>
+          <Line lineText={text[0]} />
+          <EditLine
+            lineText={text[1]}
+            correctAnswer={correctAnswer}
+            input={input}
+            setInput={setInput}
+          />
+          <div className="buttons">
+            <button className="submitAnswer button" onClick={handleClickSubmit}>
+              Check Answer
             </button>
-          ) : (
-            ''
-          )}
-          <button className="restart button" onClick={handleClickRestart}>
-            Restart
-          </button>
-        </div>
-      </form>
+            {wrongAnswer == true ? (
+              <button
+                className="revealAnswer button"
+                onClick={handleClickReveal}
+              >
+                Reveal Answer
+              </button>
+            ) : (
+              ''
+            )}
+            <button className="restart button" onClick={handleClickRestart}>
+              Restart
+            </button>
+          </div>
+        </form>
+      </>
     )
   } else {
     return (

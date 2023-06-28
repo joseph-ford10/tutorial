@@ -33,7 +33,7 @@ form {
 
 .wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 main {
@@ -82,4 +82,27 @@ main {
 .button {
   width: 100px;
   height: 50px;
+}
+
+.nextPageContainer {
+  position: relative;
+}
+
+.nextPage {
+  position: absolute;
+  left: 250px;
+}
+
+.navList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  padding-inline-start: 0;
+}
+
+.resourceList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  padding-inline-start: 0;
 }
