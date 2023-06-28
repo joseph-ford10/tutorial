@@ -1,5 +1,6 @@
 import React from 'react'
 import Exercise from './Exercise'
+import { useNavigate } from 'react-router-dom'
 
 const Overlap1 = () => {
   const exerciseText = [
@@ -7,6 +8,8 @@ const Overlap1 = () => {
     `02 JEN: I know`,
   ]
   const correctAnswer = `[I know]`
+
+  const navigate = useNavigate()
 
   return (
     <div className="wrapper">
@@ -16,18 +19,22 @@ const Overlap1 = () => {
           The Jefferson system allows us to transcribe when two (or more) people
           are speaking at the same time. When transcribing overlaps, we wrap the
           overlapping talk in square brackets. The first bracket marks the point
-          where the overlap starts. The second bracket marks the point where the
+          where the overlap starts; the second bracket marks the point where the
           overlap ends.
         </p>
         <div className="examples">
-          <p>DEB: [Oh no.]</p> <p>BOB: [That's great]</p> <p>JON: [I see]</p>
+          <p>DEB: [Oh no.]</p> <p>BOB: [That's great.]</p> <p>JON: [I see.]</p>
         </div>
+        <h2>Exercise</h2>
         <p>
           In the example below, Jen (at line 2) is speaking in overlap with Dan
           (at line 1). However, there's nothing to indicate this. Wrap Jen's "I
           know" in square brackets and press "Check Answer".
         </p>
         <Exercise text={exerciseText} correctAnswer={correctAnswer} />
+        <button className="nextPage" onClick={() => navigate('/overlap2')}>
+          Next Page
+        </button>
       </main>
     </div>
   )
