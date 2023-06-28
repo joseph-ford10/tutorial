@@ -14,6 +14,7 @@ const EditLine = ({ lineText, input, setInput }) => {
         type="text"
         value={input}
         onChange={handleChange}
+        autoFocus
       ></input>
     </>
   )

@@ -33,4 +33,21 @@ form {
 
 .submitAnswer {
   display: block;
+  margin-top: 25px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 33%;
+}
+
+.examples {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
 }
