@@ -1,4 +1,6 @@
 import Overlap1 from './Overlap1'
+import { overlap1Data as o1Data } from './Data'
+
 import Overlap2 from './Overlap2'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
