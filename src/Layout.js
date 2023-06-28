@@ -36,6 +36,7 @@ const Layout = ({
           correctAnswer={correctAnswer}
           correctAnswerFull={correctAnswerFull}
           setWrongAnswer={setWrongAnswer}
+          complete={complete}
           setComplete={setComplete}
           setHowComplete={setHowComplete}
         />

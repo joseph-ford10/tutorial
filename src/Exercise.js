@@ -10,7 +10,10 @@ const Exercise = ({
   setWrongAnswer,
   setComplete,
   setHowComplete,
+  complete,
 }) => {
+  const [input, setInput] = useState(text[1])
+
   const handleClickSubmit = (e) => {
     e.preventDefault()
     input.includes(correctAnswer) ? setComplete(true) : setWrongAnswer(true)
@@ -25,25 +28,43 @@ const Exercise = ({
     setHowComplete('revealed')
   }
 
-  const [input, setInput] = useState(text[1])
+  const handleClickRestart = (e) => {
+    setInput(text[1])
+    setComplete(false)
+  }
 
-  return (
-    <form>
-      <Line lineText={text[0]} />
-      <EditLine
-        lineText={text[1]}
-        correctAnswer={correctAnswer}
-        input={input}
-        setInput={setInput}
-      />
-      <button className="submitAnswer" onClick={handleClickSubmit}>
-        Check Answer
-      </button>
-      <button className="revealAnswer" onClick={handleClickReveal}>
-        Reveal Answer
-      </button>
-    </form>
-  )
+  if (complete === false) {
+    return (
+      <form>
+        <Line lineText={text[0]} />
+        <EditLine
+          lineText={text[1]}
+          correctAnswer={correctAnswer}
+          input={input}
+          setInput={setInput}
+        />
+        <button className="submitAnswer" onClick={handleClickSubmit}>
+          Check Answer
+        </button>
+        <button className="revealAnswer" onClick={handleClickReveal}>
+          Reveal Answer
+        </button>
+        <button className="restart" onClick={handleClickRestart}>
+          Restart
+        </button>
+      </form>
+    )
+  } else {
+    return (
+      <>
+        <Line lineText={text[0]} />
+        <Line lineText={input} />
+        <button className="restart" onClick={handleClickRestart}>
+          Restart
+        </button>
+      </>
+    )
+  }
 }
 
 export default Exercise
