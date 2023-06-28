@@ -9,6 +9,7 @@ const Layout = ({
   exerciseIntro,
   exerciseText,
   correctAnswer,
+  correctAnswerFull,
   nextPage,
 }) => {
   const navigate = useNavigate()
@@ -23,7 +24,11 @@ const Layout = ({
         </div>
         <h2>Exercise</h2>
         <p>{exerciseIntro}</p>
-        <Exercise text={exerciseText} correctAnswer={correctAnswer} />
+        <Exercise
+          text={exerciseText}
+          correctAnswer={correctAnswer}
+          correctAnswerFull={correctAnswerFull}
+        />
         <button className="nextPage" onClick={() => navigate(`${nextPage}`)}>
           Next Page
         </button>

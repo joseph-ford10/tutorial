@@ -11,6 +11,7 @@ const Overlap1 = () => {
       exerciseIntro={o1Data.exerciseIntro}
       exerciseText={o1Data.exerciseText}
       correctAnswer={o1Data.correctAnswer}
+      correctAnswerFull={o1Data.correctAnswerFull}
       nextPage="/overlap2"
     />
   )

@@ -14,6 +14,7 @@ const overlap1Data = {
     `02 JEN: I know`,
   ],
   correctAnswer: `[I know]`,
+  correctAnswerFull: `02 JEN: [I know]`,
 }
 
 export { overlap1Data }
