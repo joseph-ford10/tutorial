@@ -52,3 +52,7 @@ main {
   text-align: center;
   color: grey;
 }
+
+.revealAnswer {
+  display: inline;
+}

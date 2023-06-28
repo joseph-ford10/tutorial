@@ -1,6 +1,10 @@
 import React from 'react'
 import Exercise from './Exercise'
+import CompletedText from './CompletedText'
+import WrongAnswer from './WrongAnswer'
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import NextPageButton from './NextPageButton'
 
 const Layout = ({
   title,
@@ -13,6 +17,9 @@ const Layout = ({
   nextPage,
 }) => {
   const navigate = useNavigate()
+  const [complete, setComplete] = useState(false)
+  const [howComplete, setHowComplete] = useState('')
+  const [wrongAnswer, setWrongAnswer] = useState(false)
 
   return (
     <div className="wrapper">
@@ -28,10 +35,13 @@ const Layout = ({
           text={exerciseText}
           correctAnswer={correctAnswer}
           correctAnswerFull={correctAnswerFull}
+          setWrongAnswer={setWrongAnswer}
+          setComplete={setComplete}
+          setHowComplete={setHowComplete}
         />
-        <button className="nextPage" onClick={() => navigate(`${nextPage}`)}>
-          Next Page
-        </button>
+        {wrongAnswer === true ? <WrongAnswer /> : ''}
+        {complete === true ? <CompletedText howComplete={howComplete} /> : ''}
+        {complete === true ? <NextPageButton nextPage={nextPage} /> : ''}
       </main>
     </div>
   )

@@ -3,15 +3,26 @@ import Line from './Line'
 import EditLine from './EditLine'
 import { useState } from 'react'
 
-const Exercise = ({ text, correctAnswer, correctAnswerFull }) => {
+const Exercise = ({
+  text,
+  correctAnswer,
+  correctAnswerFull,
+  setWrongAnswer,
+  setComplete,
+  setHowComplete,
+}) => {
   const handleClickSubmit = (e) => {
     e.preventDefault()
-    input.includes(correctAnswer) ? alert('Well done') : alert('Not quite')
+    input.includes(correctAnswer) ? setComplete(true) : setWrongAnswer(true)
+    setHowComplete('solved')
   }
 
   const handleClickReveal = (e) => {
     e.preventDefault()
     setInput(correctAnswerFull)
+    setWrongAnswer(false)
+    setComplete(true)
+    setHowComplete('revealed')
   }
 
   const [input, setInput] = useState(text[1])
@@ -24,7 +35,6 @@ const Exercise = ({ text, correctAnswer, correctAnswerFull }) => {
         correctAnswer={correctAnswer}
         input={input}
         setInput={setInput}
-        placeholder="Wrap Jen's utterance in square brackets"
       />
       <button className="submitAnswer" onClick={handleClickSubmit}>
         Check Answer
