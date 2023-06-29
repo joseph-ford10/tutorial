@@ -20,6 +20,7 @@ const Layout = ({
   correctAnswer,
   correctAnswerFull,
   nextPage,
+  editLine,
 }) => {
   const navigate = useNavigate()
   const [complete, setComplete] = useState(false)
@@ -33,9 +34,7 @@ const Layout = ({
         <main>
           <h1>{title}</h1>
           <p>{explanation}</p>
-          <div className="examples">
-            <p>{examples[0]}</p> <p>{examples[1]}</p> <p>{examples[2]}</p>
-          </div>
+          {examples}
           <div className="exerciseWrapper">
             <h2>Exercise</h2>
             <p>{exerciseIntro}</p>
@@ -48,6 +47,7 @@ const Layout = ({
               complete={complete}
               setComplete={setComplete}
               setHowComplete={setHowComplete}
+              editLine={editLine}
             />
           </div>
           {wrongAnswer === true ? <WrongAnswer /> : ''}

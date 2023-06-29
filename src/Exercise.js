@@ -12,12 +12,13 @@ const Exercise = ({
   setComplete,
   setHowComplete,
   complete,
+  editLine,
 }) => {
-  const [input, setInput] = useState(text[1])
+  const [input, setInput] = useState(text[editLine])
 
   const handleClickSubmit = (e) => {
     e.preventDefault()
-    if (input.includes(correctAnswer)) {
+    if (input.trimEnd() === correctAnswerFull) {
       setComplete(true)
       setWrongAnswer(false)
       setHowComplete('solved')
@@ -44,18 +45,23 @@ const Exercise = ({
     return (
       <>
         <form>
-          <Line lineText={text[0]} />
-          <EditLine
-            lineText={text[1]}
-            correctAnswer={correctAnswer}
-            input={input}
-            setInput={setInput}
-          />
+          {text.map((text, index) =>
+            index === editLine ? (
+              <EditLine
+                lineText={text}
+                correctAnswer={correctAnswer}
+                input={input}
+                setInput={setInput}
+              />
+            ) : (
+              <Line lineText={text}></Line>
+            )
+          )}
           <div className="buttons">
             <button className="submitAnswer button" onClick={handleClickSubmit}>
               Check Answer
             </button>
-            {wrongAnswer == true ? (
+            {wrongAnswer === true ? (
               <button
                 className="revealAnswer button"
                 onClick={handleClickReveal}
