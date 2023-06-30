@@ -37,7 +37,7 @@ const Exercise = ({
 
   const handleClickRestart = (e) => {
     e.preventDefault()
-    setInput(text[1])
+    setInput(text[editLine])
     setComplete(false)
   }
 
@@ -81,8 +81,15 @@ const Exercise = ({
   } else {
     return (
       <>
-        <Line lineText={text[0]} />
-        <Line lineText={input} />
+        {text.map((text, index) =>
+          index === editLine ? (
+            <Line lineText={input} />
+          ) : (
+            <Line lineText={text}></Line>
+          )
+        )}
+        {/* <Line lineText={text[0]} />
+        <Line lineText={input} /> */}
         <div className="buttons">
           <button className="restart button" onClick={handleClickRestart}>
             Restart

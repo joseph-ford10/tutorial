@@ -15,6 +15,7 @@ const EditLine = ({ lineText, input, setInput }) => {
         value={input}
         onChange={handleChange}
         autoFocus
+        maxLength="59"
       ></input>
     </>
   )

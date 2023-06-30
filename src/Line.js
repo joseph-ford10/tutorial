@@ -8,6 +8,7 @@ const Line = ({ lineText }) => {
         type="text"
         value={lineText}
         readOnly
+        maxLength="59"
       ></input>
     </>
   )
