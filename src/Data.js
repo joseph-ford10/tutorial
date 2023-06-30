@@ -22,8 +22,8 @@ const overlap2Data = {
   title: 'Overlaps 2: Positioning',
   explanation: `In real transcripts, you should never see talk on just one line wrapped in square brackets. 
   Just as we mark the talk of the 'overlapper' with square brackets, we do the same to the talk of the 'overlapped'.
-   The square brackets on each line should then be positioned on top of/below each other. Getting the brackets to line up 
-   will often require you to add some extra white space.`,
+   The square brackets on each line should then be positioned on top of/below each other. This is one of the reasons
+   why transcripts are typically done using fixed-width fonts like Courier (or Courier New).`,
   examples: [
     `DEB: It's not today. [It's next week.] Sorry.`,
     `JON:                 [Oh right.      ]`,

@@ -30,7 +30,6 @@ const Layout = ({
   return (
     <>
       <div className="wrapper">
-        <NavList />
         <main>
           <h1>{title}</h1>
           <p>{explanation}</p>
@@ -54,7 +53,6 @@ const Layout = ({
           {complete === true ? <CompletedText howComplete={howComplete} /> : ''}
           {complete === true ? <NextPageButton nextPage={nextPage} /> : ''}
         </main>
-        <ResourceList />
       </div>
       {/* <Footer /> */}
     </>
