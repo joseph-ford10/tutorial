@@ -18,6 +18,8 @@ const Exercise = ({
 
   const handleClickSubmit = (e) => {
     e.preventDefault()
+    console.log(`Correct answer: ${correctAnswerFull}`)
+    console.log(`User answer: ${input}`)
     if (input.trimEnd() === correctAnswerFull) {
       setComplete(true)
       setWrongAnswer(false)
@@ -88,8 +90,6 @@ const Exercise = ({
             <Line lineText={text}></Line>
           )
         )}
-        {/* <Line lineText={text[0]} />
-        <Line lineText={input} /> */}
         <div className="buttons">
           <button className="restart button" onClick={handleClickRestart}>
             Restart

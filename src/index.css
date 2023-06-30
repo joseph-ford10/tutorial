@@ -56,6 +56,17 @@ main {
   color: grey;
   display: block;
 }
+
+.examples4 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  color: grey;
+  display: block;
+  white-space: pre-wrap;
+}
+
+
 .buttons {
   margin-top: 20px;
   position: relative;
@@ -154,6 +165,23 @@ li {
 }
 
 .example2Line1 {
+  margin-bottom: 0;
+  margin-left: 60px;
+}
+
+.example4Line1 {
+  margin-bottom: 0;
+  margin-left: 60px;
+}
+
+.example4Line2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 60px;
+}
+
+.example4Line3 {
+  margin-top: 0;
   margin-bottom: 0;
   margin-left: 60px;
 }

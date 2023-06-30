@@ -60,6 +60,30 @@ const overlap3Data = {
   editLine: 2,
 }
 
+const overlap4Data = {
+  title: `Overlaps 4: Taking the Floor`,
+  explanation: `In the examples we have seen so far, the overlaps have been brief, starting and finishing while the 
+  original speaker is still talking. This is not always the case. Sometimes, an overlapped speaker will stop and an 
+  overlapping speaker will continue, effectively ‘taking the floor’. When this happens, we carry on transcribing the 
+  overlapping speaker’s talk after the closing square bracket as normal.`,
+  examples: [
+    `BOB: It looks like the weat[her's not-]`,
+    `JON:                       [  I saw th]at. That's`,
+    `     why I want to try and get it done today.`,
+  ],
+  exerciseIntro: `Jen has come in to take the floor from Dan at line 4. The closing bracket has been added on Jen’s line, 
+  but you’ll need to add the starting bracket and get the positioning right.`,
+  exerciseText: [
+    `01 DAN: It's just ridiculous. [I just] can't believe that=`,
+    `02 JEN:                       [I know]`,
+    `03 DAN: =they would close [it down.]`,
+    `04 JEN:                   I agr]ee. It's terrible.`,
+  ],
+  correctAnswerFull: `04 JEN:                   [   I agr]ee. It's terrible.`,
+  editLine: 3,
+}
+
 export { overlap1Data }
 export { overlap2Data }
 export { overlap3Data }
+export { overlap4Data }
