@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { overlap4Data as o4Data } from './Data'
 import Layout from './Layout'
 
 const Overlap4 = () => {
+  const [complete4, setComplete4] = useState(false)
+
   const examples = (
     <div className="examples4">
       <p className="example4Line1">{o4Data.examples[0]}</p>
@@ -21,6 +23,8 @@ const Overlap4 = () => {
       correctAnswerFull={o4Data.correctAnswerFull}
       editLine={o4Data.editLine}
       nextPage="/overlap5"
+      complete={complete4}
+      setComplete={setComplete4}
     />
   )
 }

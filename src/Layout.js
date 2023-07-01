@@ -21,9 +21,10 @@ const Layout = ({
   correctAnswerFull,
   nextPage,
   editLine,
+  complete,
+  setComplete,
 }) => {
   const navigate = useNavigate()
-  const [complete, setComplete] = useState(false)
   const [howComplete, setHowComplete] = useState('')
   const [wrongAnswer, setWrongAnswer] = useState(false)
 

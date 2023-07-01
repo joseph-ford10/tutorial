@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { overlap3Data as o3Data } from './Data'
 import Layout from './Layout'
 
 const Overlap3 = () => {
+  const [complete3, setComplete3] = useState(false)
+
   const examples = (
     <div className="examples3">
       <p className="example3Line1">{o3Data.examples[0]}</p>
@@ -21,6 +23,8 @@ const Overlap3 = () => {
       correctAnswerFull={o3Data.correctAnswerFull}
       editLine={o3Data.editLine}
       nextPage="/overlap4"
+      complete={complete3}
+      setComplete={setComplete3}
     />
   )
 }
