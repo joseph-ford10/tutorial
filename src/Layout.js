@@ -23,6 +23,7 @@ const Layout = ({
   editLine,
   complete,
   setComplete,
+  unitNum,
 }) => {
   const navigate = useNavigate()
   const [howComplete, setHowComplete] = useState('')
@@ -48,6 +49,7 @@ const Layout = ({
               setComplete={setComplete}
               setHowComplete={setHowComplete}
               editLine={editLine}
+              unitNum={unitNum}
             />
           </div>
           {wrongAnswer === true ? <WrongAnswer /> : ''}

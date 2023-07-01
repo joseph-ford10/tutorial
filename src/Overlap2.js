@@ -25,6 +25,7 @@ const Overlap2 = () => {
       editLine={o2Data.editLine}
       complete={complete2}
       setComplete={setComplete2}
+      unitNum="2"
     />
   )
 }

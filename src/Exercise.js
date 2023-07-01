@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import Line from './Line'
 import EditLine from './EditLine'
 import { useState } from 'react'
@@ -13,8 +13,22 @@ const Exercise = ({
   setHowComplete,
   complete,
   editLine,
+  unitNum,
 }) => {
   const [input, setInput] = useState(text[editLine])
+
+  useLayoutEffect(() => {
+    const completion = localStorage.getItem(`overlap${unitNum}`, `complete`)
+    if (completion === `complete`) {
+      setComplete(true)
+      setInput(localStorage.getItem(`overlap${unitNum}Ans`))
+      localStorage.getItem(`overlap${unitNum}How`) === 'solved'
+        ? setHowComplete('solved')
+        : setHowComplete('revealed')
+    } else {
+      setComplete(false)
+    }
+  }, [setInput, unitNum, setComplete])
 
   const handleClickSubmit = (e) => {
     e.preventDefault()
@@ -24,6 +38,9 @@ const Exercise = ({
       setComplete(true)
       setWrongAnswer(false)
       setHowComplete('solved')
+      localStorage.setItem(`overlap${unitNum}`, `complete`)
+      localStorage.setItem(`overlap${unitNum}Ans`, input)
+      localStorage.setItem(`overlap${unitNum}How`, 'solved')
     } else {
       setWrongAnswer(true)
     }
@@ -41,6 +58,8 @@ const Exercise = ({
     e.preventDefault()
     setInput(text[editLine])
     setComplete(false)
+    localStorage.removeItem(`overlap${unitNum}`)
+    localStorage.removeItem(`overlap${unitNum}Ans`)
   }
 
   if (complete === false) {
