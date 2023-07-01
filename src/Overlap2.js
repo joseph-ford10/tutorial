@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Layout from './Layout'
 import { overlap2Data as o2Data } from './Data'
+import NavList from './NavList'
 
 const Overlap2 = () => {
   const [complete2, setComplete2] = useState(false)
@@ -13,20 +14,23 @@ const Overlap2 = () => {
   )
 
   return (
-    <Layout
-      title={o2Data.title}
-      explanation={o2Data.explanation}
-      examples={examples}
-      exerciseIntro={o2Data.exerciseIntro}
-      exerciseText={o2Data.exerciseText}
-      correctAnswer={o2Data.correctAnswer}
-      correctAnswerFull={o2Data.correctAnswerFull}
-      nextPage="/overlap3"
-      editLine={o2Data.editLine}
-      complete={complete2}
-      setComplete={setComplete2}
-      unitNum="2"
-    />
+    <>
+      <NavList unitNum={2} />
+      <Layout
+        title={o2Data.title}
+        explanation={o2Data.explanation}
+        examples={examples}
+        exerciseIntro={o2Data.exerciseIntro}
+        exerciseText={o2Data.exerciseText}
+        correctAnswer={o2Data.correctAnswer}
+        correctAnswerFull={o2Data.correctAnswerFull}
+        nextPage="/overlap3"
+        editLine={o2Data.editLine}
+        complete={complete2}
+        setComplete={setComplete2}
+        unitNum="2"
+      />
+    </>
   )
 }
 

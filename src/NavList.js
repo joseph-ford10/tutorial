@@ -4,25 +4,36 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { Link } from 'react-router-dom'
 
-const NavList = () => {
+import Circle from './Circle'
+
+const NavList = ({ unitNum }) => {
+  const titles = [
+    'Overlaps 1: Square Brackets',
+    'Overlaps 2: Positioning',
+    'Overlaps 3: Connecting Lines',
+    'Overlaps 4: Taking the Floor',
+  ]
+
   return (
-    <ul>
+    <ul className="navList">
       <li className="mainList">
         <h1 className="listMainHead">Tutorials</h1>
         <ul>
           <h3 className="listSubHead">Overlaps</h3>
-          <ul>
-            <Link to="/overlap1">Overlaps 1: Square Brackets</Link>
-          </ul>
-          <ul>
-            <Link to="/overlap2">Overlaps 2: Positioning</Link>
-          </ul>
-          <ul>
-            <Link to="/overlap3">Overlaps 3: Connecting Lines</Link>
-          </ul>
-          <ul>
-            <Link to="/overlap4">Overlaps 4: Taking the Floor</Link>
-          </ul>
+          {titles.map((item, index) => (
+            <Link
+              to={`/overlap${index + 1}`}
+              style={{ fontWeight: index + 1 === unitNum ? 'bold' : '' }}
+            >
+              <li
+                className={`overlap${index + 1}List navListItem ${
+                  index === 0 ? 'topItem' : ''
+                }`}
+              >
+                {item}
+              </li>
+            </Link>
+          ))}
         </ul>
       </li>
     </ul>

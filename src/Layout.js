@@ -31,33 +31,30 @@ const Layout = ({
 
   return (
     <>
-      <div className="wrapper">
-        <NavList />
-        <main>
-          <h1>{title}</h1>
-          <p>{explanation}</p>
-          {examples}
-          <div className="exerciseWrapper">
-            <h2>Exercise</h2>
-            <p>{exerciseIntro}</p>
-            <Exercise
-              text={exerciseText}
-              correctAnswer={correctAnswer}
-              correctAnswerFull={correctAnswerFull}
-              wrongAnswer={wrongAnswer}
-              setWrongAnswer={setWrongAnswer}
-              complete={complete}
-              setComplete={setComplete}
-              setHowComplete={setHowComplete}
-              editLine={editLine}
-              unitNum={unitNum}
-            />
-          </div>
-          {wrongAnswer === true ? <WrongAnswer /> : ''}
-          {complete === true ? <CompletedText howComplete={howComplete} /> : ''}
-          {complete === true ? <NextPageButton nextPage={nextPage} /> : ''}
-        </main>
-      </div>
+      <main>
+        <h1>{title}</h1>
+        <p>{explanation}</p>
+        {examples}
+        <div className="exerciseWrapper">
+          <h2>Exercise</h2>
+          <p>{exerciseIntro}</p>
+          <Exercise
+            text={exerciseText}
+            correctAnswer={correctAnswer}
+            correctAnswerFull={correctAnswerFull}
+            wrongAnswer={wrongAnswer}
+            setWrongAnswer={setWrongAnswer}
+            complete={complete}
+            setComplete={setComplete}
+            setHowComplete={setHowComplete}
+            editLine={editLine}
+            unitNum={unitNum}
+          />
+        </div>
+        {wrongAnswer === true ? <WrongAnswer /> : ''}
+        {complete === true ? <CompletedText howComplete={howComplete} /> : ''}
+        {complete === true ? <NextPageButton nextPage={nextPage} /> : ''}
+      </main>
       {/* <Footer /> */}
     </>
   )

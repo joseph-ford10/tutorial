@@ -16,6 +16,7 @@ const overlap1Data = {
   correctAnswer: `[I know]`,
   correctAnswerFull: `02 JEN: [I know]`,
   editLine: 1,
+  complete: false,
 }
 
 const overlap2Data = {
@@ -36,6 +37,7 @@ const overlap2Data = {
   ],
   correctAnswerFull: `02 JEN:                       [I know]`,
   editLine: 1,
+  complete: false,
 }
 
 const overlap3Data = {
@@ -58,6 +60,7 @@ const overlap3Data = {
   ],
   correctAnswerFull: `03 DAN: =they would close the arcade down.`,
   editLine: 2,
+  complete: false,
 }
 
 const overlap4Data = {
@@ -81,6 +84,7 @@ const overlap4Data = {
   ],
   correctAnswerFull: `04 JEN:                   [   I agr]ee. It's terrible.`,
   editLine: 3,
+  complete: false,
 }
 
 export { overlap1Data }

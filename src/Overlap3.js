@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { overlap3Data as o3Data } from './Data'
 import Layout from './Layout'
+import NavList from './NavList'
 
 const Overlap3 = () => {
   const [complete3, setComplete3] = useState(false)
@@ -14,19 +15,22 @@ const Overlap3 = () => {
   )
 
   return (
-    <Layout
-      title={o3Data.title}
-      explanation={o3Data.explanation}
-      examples={examples}
-      exerciseIntro={o3Data.exerciseIntro}
-      exerciseText={o3Data.exerciseText}
-      correctAnswerFull={o3Data.correctAnswerFull}
-      editLine={o3Data.editLine}
-      nextPage="/overlap4"
-      complete={complete3}
-      setComplete={setComplete3}
-      unitNum="3"
-    />
+    <>
+      <NavList unitNum={3} />
+      <Layout
+        title={o3Data.title}
+        explanation={o3Data.explanation}
+        examples={examples}
+        exerciseIntro={o3Data.exerciseIntro}
+        exerciseText={o3Data.exerciseText}
+        correctAnswerFull={o3Data.correctAnswerFull}
+        editLine={o3Data.editLine}
+        nextPage="/overlap4"
+        complete={complete3}
+        setComplete={setComplete3}
+        unitNum="3"
+      />
+    </>
   )
 }
 
