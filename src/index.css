@@ -237,3 +237,8 @@ li {
 .topItem {
   border-top: solid black;
 }
+
+.heading {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left
+}

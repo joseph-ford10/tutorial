@@ -32,11 +32,11 @@ const Layout = ({
   return (
     <>
       <main>
-        <h1>{title}</h1>
+        <h1 className="heading">{title}</h1>
         <p>{explanation}</p>
         {examples}
         <div className="exerciseWrapper">
-          <h2>Exercise</h2>
+          <h2 className="heading">Exercise</h2>
           <p>{exerciseIntro}</p>
           <Exercise
             text={exerciseText}
