@@ -3,6 +3,7 @@ import Overlap1 from './Overlap1'
 import Overlap2 from './Overlap2'
 import Overlap3 from './Overlap3'
 import Overlap4 from './Overlap4'
+import TopNav from './TopNav'
 import TestComponent from './TestComponent'
 import { useState } from 'react'
 
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <TopNav></TopNav>
       <div className="wrapper">
         <BrowserRouter>
           <Routes>

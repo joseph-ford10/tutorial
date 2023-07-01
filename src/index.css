@@ -247,3 +247,20 @@ li {
   font-size: 16px;
   font-weight: bold;
 }
+
+.top-nav {
+  height: 100px;
+  background-color: grey;
+  text-align: center;
+  position: relative;
+}
+
+.top-nav-heading {
+  font-family:'Courier New', Courier, monospace;
+  color: white;
+  position: absolute;
+  margin-top: 0;
+  /* left: 33%; */
+  left: 33%;
+  top: 30%;
+}

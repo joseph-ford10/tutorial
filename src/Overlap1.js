@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Layout from './Layout'
 import { overlap1Data as o1Data } from './Data'
 import NavList from './NavList'
+import TopNav from './TopNav'
 
 const Overlap1 = () => {
   const [complete1, setComplete1] = useState(false)
