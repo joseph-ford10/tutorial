@@ -83,7 +83,7 @@ main {
 .restart {
   display: inline;
   position: absolute;
-  left: 250px;
+  left: 42%;
 }
 
 .revealAnswer {
@@ -112,7 +112,7 @@ main {
 
 .nextPage {
   position: absolute;
-  left: 250px;
+  left: 42%;
 }
 
 .navList {
@@ -244,5 +244,6 @@ li {
 
 .button {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
   font-weight: bold;
 }
