@@ -28,7 +28,7 @@ const Exercise = ({
     } else {
       setComplete(false)
     }
-  }, [setInput, unitNum, setComplete])
+  }, [setInput, unitNum, setComplete, setHowComplete])
 
   const handleClickSubmit = (e) => {
     e.preventDefault()
