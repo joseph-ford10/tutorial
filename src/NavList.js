@@ -23,12 +23,18 @@ const NavList = ({ unitNum }) => {
           {titles.map((item, index) => (
             <Link
               to={`/overlap${index + 1}`}
-              style={{ fontWeight: index + 1 === unitNum ? 'bold' : '' }}
+              style={{
+                fontWeight: index + 1 === unitNum ? 'bold' : '',
+              }}
             >
               <li
                 className={`overlap${index + 1}List navListItem ${
                   index === 0 ? 'topItem' : ''
                 }`}
+                // style={{
+                //   backgroundColor:
+                //     index + 1 === unitNum ? 'lightgrey' : 'white',
+                // }}
               >
                 {item}
               </li>

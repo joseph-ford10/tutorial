@@ -226,7 +226,6 @@ li {
   font-family: 'Courier New', Courier, monospace;
   font-size: 12;
   border-bottom: solid black;
-  text-decoration: none!important;
   padding: 10px;
 }
 
@@ -241,4 +240,9 @@ li {
 .heading {
   font-family: 'Courier New', Courier, monospace;
   text-align: left
+}
+
+.button {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }

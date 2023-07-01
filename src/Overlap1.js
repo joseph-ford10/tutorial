@@ -9,7 +9,7 @@ const Overlap1 = () => {
   const examples = (
     <div className="examples1">
       <p>
-        {o1Data.examples[0]} {o1Data.examples[1]} {o1Data.examples[2]}{' '}
+        {o1Data.examples[0]} | {o1Data.examples[1]} | {o1Data.examples[2]}{' '}
       </p>
     </div>
   )
