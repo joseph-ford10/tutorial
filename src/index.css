@@ -33,8 +33,9 @@ form {
 
 .wrapper {
   display: flex;
-  justify-content: space-evenly;
   text-align: justify;
+  margin-left: 100px;
+  gap: 100px;
 }
 
 main {
@@ -130,12 +131,15 @@ main {
 
 .listSubHead {
   margin-bottom: 10px;
-  margin-top: 0;
+  margin-top: 16px;
+}
+
+.mainList {
+  list-style-type: none;
 }
 
 .listMainHead {
-  margin-bottom: 10px;
-  margin-top: 0px;
+  list-style-type: none;
   list-style-type: none;
 }
 

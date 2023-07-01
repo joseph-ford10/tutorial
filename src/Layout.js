@@ -32,6 +32,7 @@ const Layout = ({
   return (
     <>
       <div className="wrapper">
+        <NavList />
         <main>
           <h1>{title}</h1>
           <p>{explanation}</p>
