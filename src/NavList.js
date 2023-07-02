@@ -10,6 +10,7 @@ const NavList = ({ unitNum }) => {
   const titles = [
     'Overlaps 1: Square Brackets',
     'Overlaps 2: Positioning',
+    'Overlaps 3: Whitespace',
     'Overlaps 4: Connecting Lines',
     'Overlaps 5: Taking the Floor',
   ]

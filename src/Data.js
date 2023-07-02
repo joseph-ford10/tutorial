@@ -29,7 +29,7 @@ const overlap2Data = {
     `DEB: It's not today. [It's next week.] Sorry.`,
     `JON:                 [Oh right.      ]`,
   ],
-  exerciseIntro: `Square brackets have been added to Dan's line, indicating exactly where Jen spoke at the same time. 
+  exerciseIntro: `Square brackets have been added to Dan's line, indicating exactly where he and Jen spoke at the same time. 
    However, Jen's overlap still isn't in the right place. Use your spacebar to nudge it into position.`,
   exerciseText: [
     `01 DAN: It's just ridiculous. [I just] can't believe that`,

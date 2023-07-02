@@ -31,7 +31,7 @@ const Overlap3 = () => {
 
   return (
     <>
-      <NavList unitNum={2} />
+      <NavList unitNum={3} />
       <Layout
         title={o3Data.title}
         explanation={o3Data.explanation}
