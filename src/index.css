@@ -39,7 +39,7 @@ form {
 }
 
 main {
-  width: 40%;
+  width: 43%;
 }
 
 .examples1 {
@@ -239,7 +239,8 @@ li {
 
 .heading {
   font-family: 'Courier New', Courier, monospace;
-  text-align: left
+  text-align: left;
+  width: 100%;
 }
 
 .button {
@@ -257,10 +258,20 @@ li {
 
 .top-nav-heading {
   font-family:'Courier New', Courier, monospace;
+  font-size: 25px;
   color: white;
   position: absolute;
   margin-top: 0;
   /* left: 33%; */
-  left: 33%;
+  left: 39%;
   top: 30%;
+}
+
+.top-nav-subheading {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  top: 55%;
+  left: 53%;
 }
