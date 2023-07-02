@@ -40,31 +40,31 @@ const overlap2Data = {
   complete: false,
 }
 
-const overlap3Data = {
-  title: `Overlaps 3: Connecting Lines`,
+const overlap4Data = {
+  title: `Overlaps 4: Connecting Lines`,
   explanation: `The rule is that overlapping talk should be positioned one line below overlapped talk. However, 
   what if the overlapped speaker carried on talking for a while after the overlap ended—long enough to 
   require another line? In this situation, we put the rest of the overlapped speaker’s talk on the line below 
   the overlap. We then ‘connect’ the end of one line and the beginning of the next using the equals sign.`,
   examples: [
-    `BOB: I went down to the office and [had a] look around but I=`,
-    `DEB:                               [Okay.]`,
-    `BOB: =couldn't find it.`,
+    `BOB: I went down and [had a] look around but=`,
+    `DEB:                 [Okay.]`,
+    `BOB: =I couldn't find it.`,
   ],
   exerciseIntro: `Dan has carried on speaking after Jen’s overlap. We’ve transcribed the talk on the line below, 
   but we haven’t connected it up yet. Add the appropriate symbol to the transcript.`,
   exerciseText: [
     `01 DAN: It's just ridiculous. [I just] can't believe that=`,
     `02 JEN:                       [I know]`,
-    `03 DAN: they would close the arcade down.`,
+    `03 DAN: they would close it down.`,
   ],
-  correctAnswerFull: `03 DAN: =they would close the arcade down.`,
+  correctAnswerFull: `03 DAN: =they would close it down.`,
   editLine: 2,
   complete: false,
 }
 
-const overlap4Data = {
-  title: `Overlaps 4: Taking the Floor`,
+const overlap5Data = {
+  title: `Overlaps 5: Taking the Floor`,
   explanation: `In the examples we have seen so far, the overlaps have been brief, starting and finishing while the 
   original speaker is still talking. This is not always the case. Sometimes, an overlapped speaker will stop and an 
   overlapping speaker will continue, effectively ‘taking the floor’. When this happens, we carry on transcribing the 
@@ -89,5 +89,5 @@ const overlap4Data = {
 
 export { overlap1Data }
 export { overlap2Data }
-export { overlap3Data }
 export { overlap4Data }
+export { overlap5Data }

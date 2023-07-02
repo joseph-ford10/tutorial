@@ -16,7 +16,7 @@ const Overlap4 = () => {
 
   return (
     <>
-      <NavList unitNum={4} />
+      <NavList unitNum={3} />
       <Layout
         title={o4Data.title}
         explanation={o4Data.explanation}
