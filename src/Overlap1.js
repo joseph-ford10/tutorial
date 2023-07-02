@@ -7,6 +7,14 @@ import TopNav from './TopNav'
 const Overlap1 = () => {
   const [complete1, setComplete1] = useState(false)
 
+  function exerciseCheck(input) {
+    if (o1Data.correctAnswerFull === input) {
+      return true
+    } else {
+      return false
+    }
+  }
+
   const examples = (
     <div className="examples1">
       <p>
@@ -25,7 +33,7 @@ const Overlap1 = () => {
         exerciseIntro={o1Data.exerciseIntro}
         exerciseText={o1Data.exerciseText}
         correctAnswer={o1Data.correctAnswer}
-        correctAnswerFull={o1Data.correctAnswerFull}
+        exerciseCheck={exerciseCheck}
         nextPage="/overlap2"
         editLine={o1Data.editLine}
         complete={complete1}

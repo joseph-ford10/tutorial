@@ -6,7 +6,7 @@ import { useState } from 'react'
 const Exercise = ({
   text,
   correctAnswer,
-  correctAnswerFull,
+  exerciseCheck,
   wrongAnswer,
   setWrongAnswer,
   setComplete,
@@ -32,9 +32,7 @@ const Exercise = ({
 
   const handleClickSubmit = (e) => {
     e.preventDefault()
-    console.log(`Correct answer: ${correctAnswerFull}`)
-    console.log(`User answer: ${input}`)
-    if (input.trimEnd() === correctAnswerFull) {
+    if (exerciseCheck(input)) {
       setComplete(true)
       setWrongAnswer(false)
       setHowComplete('solved')
@@ -48,7 +46,7 @@ const Exercise = ({
 
   const handleClickReveal = (e) => {
     e.preventDefault()
-    setInput(correctAnswerFull)
+    setInput(correctAnswer)
     setWrongAnswer(false)
     setComplete(true)
     setHowComplete('revealed')

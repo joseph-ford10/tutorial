@@ -13,6 +13,19 @@ const Overlap2 = () => {
     </div>
   )
 
+  function exerciseCheck(input) {
+    if (input.charAt(30) == '[' && input.charAt(37) == ']') {
+      const newInput = input.replace(/\s/g, '')
+      console.log(newInput)
+      console.log(o2Data.correctAnswerFull)
+      if (newInput === o2Data.correctAnswerFull) {
+        return true
+      }
+    } else {
+      return false
+    }
+  }
+
   return (
     <>
       <NavList unitNum={2} />
@@ -23,7 +36,7 @@ const Overlap2 = () => {
         exerciseIntro={o2Data.exerciseIntro}
         exerciseText={o2Data.exerciseText}
         correctAnswer={o2Data.correctAnswer}
-        correctAnswerFull={o2Data.correctAnswerFull}
+        exerciseCheck={exerciseCheck}
         nextPage="/overlap3"
         editLine={o2Data.editLine}
         complete={complete2}

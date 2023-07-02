@@ -58,6 +58,14 @@ main {
   display: block;
 }
 
+.examples3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  color: grey;
+  display: block;
+}
+
 .examples4 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
@@ -180,6 +188,19 @@ li {
 
 .example2Line1 {
   margin-bottom: 0;
+  margin-left: 60px;
+}
+
+.example3Line1 {
+  white-space: pre-wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 60px;
+}
+
+.example3Line2 {
+  white-space: pre-wrap;
+  margin-top: 0;
   margin-left: 60px;
 }
 

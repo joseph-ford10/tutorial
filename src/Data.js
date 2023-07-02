@@ -13,7 +13,7 @@ const overlap1Data = {
     `01 DAN: It's just ridiculous. I just can't believe that`,
     `02 JEN: I know`,
   ],
-  correctAnswer: `[I know]`,
+  correctAnswer: `02 JEN: [I know]`,
   correctAnswerFull: `02 JEN: [I know]`,
   editLine: 1,
   complete: false,
@@ -35,7 +35,31 @@ const overlap2Data = {
     `01 DAN: It's just ridiculous. [I just] can't believe that`,
     `02 JEN: [I know]`,
   ],
-  correctAnswerFull: `02 JEN:                       [I know]`,
+  correctAnswer: `02 JEN:                       [I know]`,
+  correctAnswerFull: `02JEN:[Iknow]`,
+  editLine: 1,
+  complete: false,
+}
+
+const overlap3Data = {
+  title: `Overlap 3: Whitespace`,
+  explanation: `Even when two utterances overlap in a recording, that doesn’t mean that they will occupy 
+  the same amount of space when transcribed. It’s often the case that one set of square brackets is longer on the 
+  page than the other, especially when we start adding in transcription notation. The solution is to add some 
+  whitespace within the shorter pair of brackets to expand it out. There are no hard and fast rules about where and 
+  how the white space should be added. As long as it’s readable, it should be fine.`,
+  examples: [
+    `JON: It was [just     so     great.] It really was.`,
+    `DEB:        [That sounds wonderful.]`,
+  ],
+  exerciseIntro: `The first square bracket below has been positioned correctly, but the second one is off. 
+  Add some whitespace in whatever style you like and make the brackets line up. Just remember: keep it readable.`,
+  exerciseText: [
+    `01 JEN: I've never [seen anything] like it in my life.`,
+    `02 DAN:            [Oh wow.]`,
+  ],
+  correctAnswer: `02 DAN:            [   Oh wow.   ]`,
+  correctAnswerFull: `02DAN:[Ohwow.]`,
   editLine: 1,
   complete: false,
 }
@@ -58,6 +82,7 @@ const overlap4Data = {
     `02 JEN:                       [I know]`,
     `03 DAN: they would close it down.`,
   ],
+  correctAnswer: `03 DAN: =they would close it down.`,
   correctAnswerFull: `03 DAN: =they would close it down.`,
   editLine: 2,
   complete: false,
@@ -82,12 +107,14 @@ const overlap5Data = {
     `03 DAN: =they would close [it down.]`,
     `04 JEN:                   I agr]ee. It's terrible.`,
   ],
-  correctAnswerFull: `04 JEN:                   [   I agr]ee. It's terrible.`,
+  correctAnswer: `04 JEN:                   [   I agr]ee. It's terrible.`,
+  correctAnswerFull: `04JEN:[Iagr]ee.It'sterrible.`,
   editLine: 3,
   complete: false,
 }
 
 export { overlap1Data }
 export { overlap2Data }
+export { overlap3Data }
 export { overlap4Data }
 export { overlap5Data }

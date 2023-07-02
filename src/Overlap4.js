@@ -14,6 +14,14 @@ const Overlap4 = () => {
     </div>
   )
 
+  function exerciseCheck(input) {
+    if (input === o4Data.correctAnswerFull) {
+      return true
+    } else {
+      return false
+    }
+  }
+
   return (
     <>
       <NavList unitNum={3} />
@@ -23,7 +31,8 @@ const Overlap4 = () => {
         examples={examples}
         exerciseIntro={o4Data.exerciseIntro}
         exerciseText={o4Data.exerciseText}
-        correctAnswerFull={o4Data.correctAnswerFull}
+        correctAnswer={o4Data.correctAnswer}
+        exerciseCheck={exerciseCheck}
         editLine={o4Data.editLine}
         nextPage="/overlap5"
         complete={complete4}

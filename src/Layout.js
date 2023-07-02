@@ -18,7 +18,7 @@ const Layout = ({
   exerciseIntro,
   exerciseText,
   correctAnswer,
-  correctAnswerFull,
+  exerciseCheck,
   nextPage,
   editLine,
   complete,
@@ -41,7 +41,7 @@ const Layout = ({
           <Exercise
             text={exerciseText}
             correctAnswer={correctAnswer}
-            correctAnswerFull={correctAnswerFull}
+            exerciseCheck={exerciseCheck}
             wrongAnswer={wrongAnswer}
             setWrongAnswer={setWrongAnswer}
             complete={complete}

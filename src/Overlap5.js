@@ -14,6 +14,19 @@ const Overlap5 = () => {
     </div>
   )
 
+  function exerciseCheck(input) {
+    if (input.charAt(26) == '[' && input.charAt(35) == ']') {
+      const newInput = input.replace(/\s/g, '')
+      console.log(newInput)
+      console.log(o5Data.correctAnswerFull)
+      if (newInput === o5Data.correctAnswerFull) {
+        return true
+      }
+    } else {
+      return false
+    }
+  }
+
   return (
     <>
       <NavList unitNum={4} />
@@ -23,7 +36,8 @@ const Overlap5 = () => {
         examples={examples}
         exerciseIntro={o5Data.exerciseIntro}
         exerciseText={o5Data.exerciseText}
-        correctAnswerFull={o5Data.correctAnswerFull}
+        correctAnswer={o5Data.correctAnswer}
+        exerciseCheck={exerciseCheck}
         editLine={o5Data.editLine}
         nextPage="/overlap6"
         complete={complete5}
