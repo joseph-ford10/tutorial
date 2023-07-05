@@ -33,7 +33,7 @@ const Layout = ({
     <>
       <main>
         <h1 className="heading">{title}</h1>
-        <p>{explanation}</p>
+        <p className="explanation">{explanation}</p>
         {examples}
         <div className="exerciseWrapper">
           <h2 className="heading">Exercise</h2>

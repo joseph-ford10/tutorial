@@ -28,7 +28,7 @@ const Overlap2 = () => {
 
   return (
     <>
-      <NavList unitNum={2} />
+      <NavList unitNum={2} complete2={complete2} />
       <Layout
         title={o2Data.title}
         explanation={o2Data.explanation}

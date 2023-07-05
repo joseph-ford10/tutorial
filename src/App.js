@@ -10,10 +10,14 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [complete1, setComplete1] = useState(false)
-  const [complete2, setComplete2] = useState(false)
-  const [complete3, setComplete3] = useState(false)
-  const [complete4, setComplete4] = useState(false)
+  const [complete, setComplete] = useState({
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+    6: false,
+  })
 
   return (
     <div className="App">
@@ -21,6 +25,7 @@ function App() {
       <div className="wrapper">
         <BrowserRouter>
           <Routes>
+            <Route path="test" element={<TestComponent />} />
             <Route path="overlap1" element={<Overlap1 />} />
             <Route path="overlap2" element={<Overlap2 />} />
             <Route path="overlap3" element={<Overlap3 />} />
