@@ -91,7 +91,7 @@ const Exercise = ({
               ''
             )}
             <button className="restart button" onClick={handleClickRestart}>
-              Restart
+              Reset
             </button>
           </div>
         </form>
@@ -109,7 +109,7 @@ const Exercise = ({
         )}
         <div className="buttons">
           <button className="restart button" onClick={handleClickRestart}>
-            Restart
+            Reset
           </button>
         </div>
       </>

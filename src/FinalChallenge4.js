@@ -11,7 +11,7 @@ const FinalChallenge4 = ({ complete, setComplete }) => {
     ) {
       return 'complete'
     } else {
-      return `That's not quite right. If you're stuck, you might want to check Overlaps 4.`
+      return `That's not quite right. If you're stuck, you might want to check the previous units.`
     }
   }
 

@@ -337,3 +337,47 @@ li {
 .finalChallenges {
   padding-bottom: 50px;
 }
+
+.modal {
+  position: absolute; 
+  height: 200px;
+  width: 400px;
+  top: 25%;
+  left: 42%;
+  opacity: 100%;
+  background-color: lightgrey;
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+  padding: 20px;
+}
+
+.finalButtons {
+  position: relative; 
+  margin-top: 20px;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.checkAnswerFinal{
+  position: absolute;
+  left: 0;
+}
+
+.resetFinal {
+  position: absolute;
+  left: 250px;
+}
+
+.revealAnswerFinal {
+  position: absolute;
+  right: 0;
+}
+
+.main {
+  padding: 20px;
+}
+
+.messageArea {
+  white-space: pre-wrap;
+}

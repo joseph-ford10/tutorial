@@ -10,7 +10,7 @@ const FinalExercise = ({
   challNum,
 }) => {
   const [text, setText] = useState(transcriptText)
-  const [message, setMessage] = useState('Complete the challenge above.')
+  const [message, setMessage] = useState('          ')
   const [color, setColor] = useState('black')
   const [wrongAnswer, setWrongAnswer] = useState(false)
   const [readOnly, setReadOnly] = useState(false)
@@ -72,7 +72,7 @@ const FinalExercise = ({
 
   const handleReset = (e) => {
     e.preventDefault()
-    setMessage('Complete the challenge above')
+    setMessage(' ')
     setComplete((complete) => ({
       ...complete,
       [challNum]: false,
@@ -119,17 +119,26 @@ const FinalExercise = ({
             ></input>
           )
         })}
-        <div className="buttons">
+        <div className="finalButtons">
           {' '}
           {complete[challNum] === false ? (
-            <button onClick={handleSubmit}>Check Answer</button>
+            <button onClick={handleSubmit} className="button checkAnswerFinal">
+              Check Answer
+            </button>
           ) : (
             ''
           )}
-          <button onClick={handleReset}>Reset</button>
+          <button onClick={handleReset} className="button resetFinal">
+            Reset
+          </button>
           {complete[challNum] === false ? (
             wrongAnswer === true ? (
-              <button onClick={revealAnswer}>Reveal Answer</button>
+              <button
+                onClick={revealAnswer}
+                className="button revealAnswerFinal"
+              >
+                Reveal Answer
+              </button>
             ) : (
               ''
             )
