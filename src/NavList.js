@@ -13,6 +13,7 @@ const NavList = ({ unitNum, complete1, complete2 }) => {
     'Overlaps 3: Whitespace',
     'Overlaps 4: Connecting Lines',
     'Overlaps 5: Taking the Floor',
+    'Overlaps 6: Final Challenges',
   ]
 
   const completion = [complete1, complete2]

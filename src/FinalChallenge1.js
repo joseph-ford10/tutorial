@@ -58,7 +58,7 @@ const FinalChallenge1 = () => {
     <>
       <h1 className="heading">{o6Data.title}</h1>
       <section>
-        <h2>Challenge One</h2>
+        <h2 className="heading">Challenge One</h2>
         <p>{o6Data.challenge1Intro}</p>
         <FinalExercise
           check={challenge1Check}
