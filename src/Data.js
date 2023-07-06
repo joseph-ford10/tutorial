@@ -155,6 +155,17 @@ const overlap6Data = {
     `01 DAN: It's really strange [but-]`,
     `02 JEN:                     [It i]s. It's strange.`,
   ],
+  challenge4Intro: `There are several problems with the transcript below. Fix them.`,
+  challenge4Text: {
+    1: `01 JEN: It's been like that for years. I [remember] it`,
+    2: `02 DAN: [[Really?`,
+    3: `03 DAN: =being like that when I first went.`,
+  },
+  challenge4Answer: [
+    `01 JEN: It's been like that for years. I [remember] it=`,
+    `02 DAN:                                  [Really? ]`,
+    `03 JEN: =being like that when I first went.`,
+  ],
 }
 
 export { overlap1Data }

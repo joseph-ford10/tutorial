@@ -47,6 +47,7 @@ const FinalExercise = ({
       ...text,
       [key]: update,
     }))
+    console.log(text)
   }
 
   const handleSubmit = (e) => {
