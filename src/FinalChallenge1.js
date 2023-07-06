@@ -2,15 +2,12 @@ import React from 'react'
 import FinalExercise from './FinalExercise'
 import { overlap6Data as o6Data } from './Data'
 
-const FinalChallenge1 = () => {
+const FinalChallenge1 = ({ complete, setComplete }) => {
   const challenge1Check = (text) => {
     const line1Open = text[1].indexOf('[')
     const line1Close = text[1].indexOf(']')
     const line2Open = text[2].indexOf('[')
     const line2Close = text[2].indexOf(']')
-
-    console.log(`Line 1 Open: ${line1Open}`)
-    console.log(`Line 2 Open: ${line2Open}`)
 
     const fullString1 = text[1]
       .concat(text[3])
@@ -18,14 +15,9 @@ const FinalChallenge1 = () => {
       .replace(']', '')
       .replace(/\s/g, '')
 
-    console.log(fullString1)
-
     const fullString2 = text[2].replace(/\s/g, '')
 
     const correctLength = line2Close - line2Open + 3
-    console.log(`Full string 2: ${fullString2}`)
-    console.log(`Full string 2 length: ${fullString2.length}`)
-    console.log(`Correct length=${correctLength}`)
 
     if (
       line1Open !== -1 &&
@@ -63,6 +55,9 @@ const FinalChallenge1 = () => {
           check={challenge1Check}
           transcriptText={o6Data.challenge1Text}
           answer={o6Data.challenge1Answer}
+          complete={complete}
+          setComplete={setComplete}
+          challNum="1"
         />
       </section>
     </>

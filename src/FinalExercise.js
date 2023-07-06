@@ -1,32 +1,68 @@
 import React, { useState } from 'react'
-import NavList from './NavList'
+import { useLayoutEffect } from 'react'
 
-const FinalExercise = ({ check, transcriptText, answer }) => {
+const FinalExercise = ({
+  check,
+  transcriptText,
+  answer,
+  complete,
+  setComplete,
+  challNum,
+}) => {
   const [text, setText] = useState(transcriptText)
   const [message, setMessage] = useState('Complete the challenge above.')
-  const [complete, setComplete] = useState(false)
   const [color, setColor] = useState('black')
   const [wrongAnswer, setWrongAnswer] = useState(false)
   const [readOnly, setReadOnly] = useState(false)
+  const [howComplete, setHowComplete] = useState('')
 
   const textKeys = Object.keys(text)
 
+  useLayoutEffect(() => {
+    const completion = localStorage.getItem(`overlapChall${challNum}`)
+    if (completion === `complete`) {
+      setComplete((complete) => ({
+        ...complete,
+        [challNum]: true,
+      }))
+      const answer = localStorage.getItem(`overlapChall${challNum}Ans`)
+      const answer2 = JSON.parse(answer)
+      setText(answer2)
+      localStorage.getItem(`overlapChall${challNum}How`) === 'solved'
+        ? setMessage('Well done! Onto the next one?')
+        : setMessage(
+            'If you need a refresher, you can go back. Otherwise--onto the next one?'
+          )
+      setColor('gray')
+    } else {
+      setComplete((complete) => ({
+        ...complete,
+        [challNum]: false,
+      }))
+    }
+  }, [setText, challNum, setComplete, setHowComplete])
+
   const handleChange = (key, update) => {
-    console.log(text)
     setText((text) => ({
       ...text,
       [key]: update,
     }))
-    console.log(check(text))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (check(text) === 'complete') {
+    if (check(text) == 'complete') {
       setMessage('Well done! Onto the next one?')
-      setComplete(true)
+      setComplete((complete) => ({
+        ...complete,
+        [challNum]: true,
+      }))
       setColor('gray')
       setReadOnly(true)
+      setHowComplete('completed')
+      localStorage.setItem(`overlapChall${challNum}`, `complete`)
+      localStorage.setItem(`overlapChall${challNum}Ans`, JSON.stringify(text))
+      localStorage.setItem(`overlapChall${challNum}How`, 'solved')
     } else {
       setMessage(check(text))
       setWrongAnswer(true)
@@ -36,11 +72,17 @@ const FinalExercise = ({ check, transcriptText, answer }) => {
   const handleReset = (e) => {
     e.preventDefault()
     setMessage('Complete the challenge above')
-    setComplete(false)
+    setComplete((complete) => ({
+      ...complete,
+      [challNum]: false,
+    }))
     setColor('black')
     setText(transcriptText)
     setReadOnly(false)
     setWrongAnswer(false)
+    localStorage.removeItem(`overlapChall${challNum}`)
+    localStorage.removeItem(`overlapChall${challNum}Ans`)
+    localStorage.removeItem(`overlapChall${challNum}How`)
   }
 
   const revealAnswer = (e) => {
@@ -49,8 +91,15 @@ const FinalExercise = ({ check, transcriptText, answer }) => {
       'If you need a refresher, you can go back. Otherwise--onto the next one?'
     )
     setText(answer)
-    setComplete(true)
+    setComplete((complete) => ({
+      ...complete,
+      [challNum]: true,
+    }))
+    setHowComplete('revealed')
     setColor('gray')
+    localStorage.setItem(`overlapChall${challNum}`, `complete`)
+    localStorage.setItem(`overlapChall${challNum}Ans`, JSON.stringify(answer))
+    localStorage.setItem(`overlapChall${challNum}How`, 'revealed')
   }
 
   return (
@@ -71,13 +120,13 @@ const FinalExercise = ({ check, transcriptText, answer }) => {
         })}
         <div className="buttons">
           {' '}
-          {complete === false ? (
+          {complete[challNum] === false ? (
             <button onClick={handleSubmit}>Check Answer</button>
           ) : (
             ''
           )}
           <button onClick={handleReset}>Reset</button>
-          {complete === false ? (
+          {complete[challNum] === false ? (
             wrongAnswer === true ? (
               <button onClick={revealAnswer}>Reveal Answer</button>
             ) : (

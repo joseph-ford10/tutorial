@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 import Circle from './Circle'
 
-const NavList = ({ unitNum, complete1, complete2 }) => {
+const NavList = ({ unitNum }) => {
   const titles = [
     'Overlaps 1: Square Brackets',
     'Overlaps 2: Positioning',
@@ -15,10 +15,6 @@ const NavList = ({ unitNum, complete1, complete2 }) => {
     'Overlaps 5: Taking the Floor',
     'Overlaps 6: Final Challenges',
   ]
-
-  const completion = [complete1, complete2]
-  console.log(`Complete1: ${complete1}`)
-  console.log(`Complete2: ${complete2}`)
 
   return (
     <ul className="navList">
@@ -31,7 +27,6 @@ const NavList = ({ unitNum, complete1, complete2 }) => {
               to={`/overlap${index + 1}`}
               style={{
                 fontWeight: index + 1 === unitNum ? 'bold' : '',
-                backgroundColor: completion[index] === true ? 'green' : 'white',
               }}
             >
               <li
