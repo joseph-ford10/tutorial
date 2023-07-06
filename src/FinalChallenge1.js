@@ -56,7 +56,6 @@ const FinalChallenge1 = () => {
 
   return (
     <>
-      <h1 className="heading">{o6Data.title}</h1>
       <section>
         <h2 className="heading">Challenge One</h2>
         <p>{o6Data.challenge1Intro}</p>

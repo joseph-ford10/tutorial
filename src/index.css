@@ -20,6 +20,7 @@ code {
   color: black;
   font-weight: bold;
   border: none;
+  white-space: pre-wrap,
 }
 
 .readOnlyLine {
