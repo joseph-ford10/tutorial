@@ -113,8 +113,25 @@ const overlap5Data = {
   complete: false,
 }
 
+const overlap6Data = {
+  title: `Overlaps 6: Final Challenges`,
+  challenge1Heading: `Challenge One`,
+  challenge1Intro: `Add a single overlap to the transcript below. The overlap should come from Dan at line 2 and be 
+  overlapping with some of Jen’s talk at line 1. You can put the overlap wherever you like and have it say whatever you want. 
+  However, the opening and closing brackets must be lined up correctly and Dan's overlap 
+  must be at least five characters long (not counting spaces). You can add spaces to Jen's line, but 
+  do not modify what she says.`,
+  challenge1Text: {
+    1: `01 JEN: But that's just the way it is I guess. There's=`,
+    2: `02 DAN:`,
+    3: `03 JEN: =not much I can do about it.`,
+  },
+  fullString1: `01JEN:Butthat'sjustthewayitisIguess.There's=03JEN:=notmuchIcandoaboutit.`,
+}
+
 export { overlap1Data }
 export { overlap2Data }
 export { overlap3Data }
 export { overlap4Data }
 export { overlap5Data }
+export { overlap6Data }

@@ -3,6 +3,7 @@ import Overlap2 from './Overlap2'
 import Overlap3 from './Overlap3'
 import Overlap4 from './Overlap4'
 import Overlap5 from './Overlap5'
+import Overlap6 from './Overlap6'
 import TopNav from './TopNav'
 import TestComponent from './TestComponent'
 import { useState } from 'react'
@@ -31,6 +32,7 @@ function App() {
             <Route path="overlap3" element={<Overlap3 />} />
             <Route path="overlap4" element={<Overlap4 />} />
             <Route path="overlap5" element={<Overlap5 />} />
+            <Route path="overlap6" element={<Overlap6 />} />
           </Routes>
         </BrowserRouter>
       </div>
