@@ -16,7 +16,7 @@ const Overlap6 = () => {
   return (
     <>
       <NavList unitNum={6} complete={complete} />
-      <main>
+      <main className="finalChallenges">
         <h1 className="heading">Overlaps 6: Final Challenges</h1>
         <FinalChallenge1 complete={complete} setComplete={setComplete} />
         <FinalChallenge2 complete={complete} setComplete={setComplete} />
