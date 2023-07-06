@@ -143,6 +143,18 @@ const overlap6Data = {
     `02 JEN:                         [No I've not.]`,
     `03 DAN: =last year.`,
   ],
+  challenge3Intro: `In the transcript below, Dan stops talking abruptly at line 1. However, there's no obvious reason
+  for him doing so. The challenge is to add a floor-taking overlap from Jen at line 2. Remember, the overlap will need 
+  start at some point during Dan's line (your choice) and continue after the closing bracket on Jen's line. The overlap 
+  should be at least 10 characters long, not including spaces.`,
+  challenge3Text: {
+    1: `01 DAN: It's really strange but-`,
+    2: `02 JEN:`,
+  },
+  challenge3Answer: [
+    `01 DAN: It's really strange [but-]`,
+    `02 JEN:                     [It i]s. It's strange.`,
+  ],
 }
 
 export { overlap1Data }

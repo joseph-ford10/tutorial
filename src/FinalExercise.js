@@ -51,7 +51,7 @@ const FinalExercise = ({
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (check(text) == 'complete') {
+    if (check(text) === 'complete') {
       setMessage('Well done! Onto the next one?')
       setComplete((complete) => ({
         ...complete,

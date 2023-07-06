@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import FinalChallenge1 from './FinalChallenge1'
 import FinalChallenge2 from './FinalChallenge2'
+import FinalChallenge3 from './FinalChallenge3'
 import NavList from './NavList'
 
 const Overlap6 = () => {
@@ -18,6 +19,7 @@ const Overlap6 = () => {
         <h1 className="heading">Overlaps 6: Final Challenges</h1>
         <FinalChallenge1 complete={complete} setComplete={setComplete} />
         <FinalChallenge2 complete={complete} setComplete={setComplete} />
+        <FinalChallenge3 complete={complete} setComplete={setComplete} />
       </main>
     </>
   )
