@@ -27,6 +27,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="test" element={<TestComponent />} />
+            <Route path="/" element={<Overlap1 />} />
             <Route path="overlap1" element={<Overlap1 />} />
             <Route path="overlap2" element={<Overlap2 />} />
             <Route path="overlap3" element={<Overlap3 />} />
