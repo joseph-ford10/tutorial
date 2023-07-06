@@ -127,6 +127,11 @@ const overlap6Data = {
     3: `03 JEN: =not much I can do about it.`,
   },
   fullString1: `01JEN:Butthat'sjustthewayitisIguess.There's=03JEN:=notmuchIcandoaboutit.`,
+  challenge1Answer: {
+    1: `01 JEN: But that's [ just ] the way it is I guess. There's=`,
+    2: `02 DAN:            [Right.]   `,
+    3: `03 JEN: =not much I can do about it.`,
+  },
   challenge2Intro: 'There is a problem with the transcript below. Fix it.',
   challenge2Text: {
     1: `01 DAN: Ever been to Germany? I [went for the] first time`,
@@ -135,6 +140,7 @@ const overlap6Data = {
   },
   challenge2Answer: [
     `01 DAN: Ever been to Germany? I [went for the] first time=`,
+    `02 JEN:                         [No I've not.]`,
     `03 DAN: =last year.`,
   ],
 }

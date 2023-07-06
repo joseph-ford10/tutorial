@@ -27,6 +27,7 @@ const FinalChallenge2 = () => {
         <FinalExercise
           check={challenge2Check}
           transcriptText={o6Data.challenge2Text}
+          answer={o6Data.challenge2Answer}
         />
       </section>
     </>
